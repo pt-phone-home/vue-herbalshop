@@ -92,6 +92,10 @@ export default {
       
       order.orderCount--;
 
+      if (order.orderCount <= 1) {
+        order.orderCount = 1;
+      }
+
     }, 
     increaseOrderCount: function (order) {
       order.orderCount++;
