@@ -20,14 +20,14 @@
 <script>
 import NavigationBar from './components/NavigationBar.vue'
 import Hero from './components/Hero.vue'
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
 import Product from './components/Product.vue'
 import Cart from './components/Cart.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld,
+    // HelloWorld,
     NavigationBar,
     Hero,
     Product,
