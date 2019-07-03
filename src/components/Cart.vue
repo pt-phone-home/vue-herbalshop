@@ -5,24 +5,24 @@
         </div>
     <div class="w-full flex justify-between py-2 mt-2 bg-gray-200 px-2" v-for="item in items" :key="item.id">
         
-        <div class="w-3/6">
+        <div class="w-3/6 text-sm md:text-base">
            {{item.name}} - €{{Number(item.price).toFixed(2)}}
         </div>
         <div class="flex justify-between w-1/6">
             
-            <button @click="$emit('decrease-order-count', item)" class="mr-2 px-2 rounded bg-green-400 text-gray-100 text-lg">-</button>
-            <span>{{item.orderCount}}</span>
-            <button @click="$emit('increase-order-count', item)" class="ml-2 px-2 rounded bg-green-400 text-gray-100 text-lg">+</button>
+            <button @click="$emit('decrease-order-count', item)" class="mr-2 px-2 rounded bg-green-400 text-gray-100 text-base md:text-lg">-</button>
+            <span class="text-sm md:text-base">{{item.orderCount}}</span>
+            <button @click="$emit('increase-order-count', item)" class="ml-2 px-2 rounded bg-green-400 text-gray-100 text-base md:text-lg">+</button>
         </div>
-        <div class="w-1/6 text-center">
+        <div class="w-1/6 text-center text-sm md:text-base">
             €{{Number(item.orderCount * item.price).toFixed(2)}}
             
         </div>
         <div class="w-1/6">
-            <button @click="$emit('remove-from-cart', item)" class="bg-red-600 hover:bg-red-400 px-1 text-sm text-gray-100 rounded py-1">Remove</button>
+            <button @click="$emit('remove-from-cart', item)" class="bg-red-600 hover:bg-red-400 px-1 text-sm text-gray-100 rounded py-1 text-sm md:text-base">Remove</button>
         </div>
     </div>
-    <div class="text-center text-2xl bg-gray-400 mt-4 py-2">
+    <div class="text-center text-lg md:text-2xl bg-gray-400 mt-4 py-2">
        Total: € {{Number(total).toFixed(2)}}
     </div>
 
