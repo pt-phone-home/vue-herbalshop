@@ -40,8 +40,8 @@
                 productCount: 1,
             }
         }, 
-        methods: {}
-            
+        methods: {
+
         },
         computed: {
             productTotal: function (id) {
