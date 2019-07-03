@@ -23,7 +23,7 @@
         </div>
     </div>
     <div class="text-center text-2xl bg-gray-400 mt-4 py-2">
-       Total: € {{total}}
+       Total: € {{Number(total).toFixed(2)}}
     </div>
 
     <div class="flex justify-center">
@@ -44,9 +44,6 @@
 
         },
         computed: {
-            productTotal: function (id) {
-               return this.item.price * this.productCount
-            }, 
             total: function () {
                 return this.items.reduce((acc, item) => acc + Number(item.price * item.orderCount), 0);
             }
