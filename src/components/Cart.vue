@@ -40,13 +40,7 @@
                 productCount: 1,
             }
         }, 
-        methods: {
-            increaseCounter: function () {
-                this.productCount++;
-            },
-            decreaseCounter: function (id) {
-                this.productCount--;
-            },
+        methods: {}
             
         },
         computed: {
